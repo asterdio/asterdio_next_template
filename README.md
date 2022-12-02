@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Asterdio Incorporated
 
-## Getting Started
+![logo](https://asterdio.com/wp-content/uploads/2022/06/asterdio-light.png)
 
-First, run the development server:
+  
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This repository will be used as a template to initialize any new projects in the organization.    The template contains:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* CI/CD pipeline template
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+* Pull_Request template
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+You can remove the above section and add these following into the readme
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+ - Project Name: {{Name of the Project}}
+ - Languages or Frameworks Used: 
+ - How to deploy?
 
-## Learn More
+***
 
-To learn more about Next.js, take a look at the following resources:
+> Note: If you are working on API or backend related development, Please
+> provide a route of /api/monitor or some any routes for the DevOps team
+> to monitor the API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+***
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Branching Conventions
 
-## Deploy on Vercel
+ - Main
+* Staging: Used for deployment in staging environments 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Production: Used for deployment in production environments 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+  
+
+The three branches should be created in all repositories in the organization.
+
+  ***
+
+## Rules to be followed while pushing to the repositories:
+
+ - Please review for any secrets or configuration files before pushing to the repository. Do not push it. 
+ - Please use .env files for configuration and push a env file template. It will be easier for managing envs in different environments 
+ - The production and staging branch are protected so ****please create a PR to merge into those branches and do not directly push into those branches.****
+ - The CI/CD pipeline will be implemented in the **staging** and **production** branches.
+ -  The deployment status will be notified through the **actions** tab on the repository page.
+ - Always provide in brief about the commits pushed while creating a pull request to the branch
+  
+  ***
+
+> *Please create a pull request to the main branch if you think there are any other trivial things to be added in the template. 
+> This template is created to follow the best practices while pushing to the repositories*
+
+***
